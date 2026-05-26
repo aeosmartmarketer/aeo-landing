@@ -1,0 +1,441 @@
+/* =============================================================
+   AEO.co — Cohort 2 Landing Page
+   Stylesheet · v1.0 · 2026-05-21
+   A Division of SmartMarketer™
+   ============================================================= */
+
+/* -------- Base -------- */
+html { scroll-behavior: smooth; }
+body {
+  background: #0A0A0A;
+  color: #F5F5F5;
+  font-feature-settings: "ss01", "cv11";
+}
+
+/* -------- Typography utilities -------- */
+.eyebrow {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #4FE584;
+}
+.eyebrow-mute {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #6E6E6E;
+}
+.h-display {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.035em;
+  line-height: 1.02;
+}
+.h-italic {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+}
+.metric {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.92;
+}
+
+/* -------- Decorative -------- */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, rgba(79, 229, 132, 0.35), rgba(79, 229, 132, 0) 70%);
+}
+.rule-mute {
+  height: 1px;
+  background: #1F1F1F;
+}
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid #2A2A2A;
+  color: #A0A0A0;
+}
+.pill-green {
+  color: #4FE584;
+  border-color: rgba(79, 229, 132, 0.4);
+  background: rgba(79, 229, 132, 0.06);
+}
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+/* -------- Hero -------- */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(60% 60% at 80% 20%, rgba(79, 229, 132, 0.10) 0%, rgba(79, 229, 132, 0) 70%),
+    radial-gradient(40% 50% at 10% 90%, rgba(79, 229, 132, 0.06) 0%, rgba(79, 229, 132, 0) 70%);
+}
+
+/* -------- AEO logo mark -------- */
+.aeo-mark {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* -------- CTA buttons -------- */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: #4FE584;
+  color: #0A0A0A;
+  font-weight: 600;
+  font-size: 15px;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+.btn-primary:hover {
+  background: #6FE69D;
+  transform: translateY(-1px);
+}
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 22px;
+  border-radius: 999px;
+  border: 1px solid #2A2A2A;
+  color: #F5F5F5;
+  font-weight: 500;
+  font-size: 14px;
+}
+.btn-ghost:hover {
+  border-color: #4FE584;
+  color: #4FE584;
+}
+
+/* -------- Card surfaces -------- */
+.card {
+  background: #111111;
+  border: 1px solid #1F1F1F;
+  border-radius: 18px;
+}
+.card-soft {
+  background: linear-gradient(180deg, #121212 0%, #0E0E0E 100%);
+  border: 1px solid #1F1F1F;
+  border-radius: 18px;
+}
+
+/* -------- Big metric numbers -------- */
+.num {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  font-size: clamp(56px, 8vw, 96px);
+  line-height: 0.9;
+  color: #4FE584;
+}
+
+/* -------- B.R.A.I.N. pillar drop cap -------- */
+.drop {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 1;
+  color: #4FE584;
+  letter-spacing: -0.04em;
+}
+
+/* -------- Atomization track (5-stage loop) -------- */
+.track {
+  position: relative;
+}
+.track::before {
+  content: "";
+  position: absolute;
+  left: 6%;
+  right: 6%;
+  top: 50%;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(79, 229, 132, 0.0), rgba(79, 229, 132, 0.5), rgba(79, 229, 132, 0.0));
+  transform: translateY(-50%);
+}
+
+/* -------- Outdoor Vitals thumb grid (5 × 3, fills) -------- */
+.ov-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+}
+.ov-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid #1F1F1F;
+}
+
+/* -------- Form input -------- */
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  background: #0E0E0E;
+  border: 1px solid #1F1F1F;
+  border-radius: 12px;
+  color: #F5F5F5;
+  font-size: 15px;
+  transition: border 0.15s ease, background 0.15s ease;
+}
+.input:focus {
+  outline: none;
+  border-color: #4FE584;
+  background: #111111;
+}
+.input::placeholder {
+  color: #6E6E6E;
+}
+
+/* -------- Phase chip -------- */
+.phase-num {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: #4FE584;
+}
+
+/* -------- Selection -------- */
+::selection {
+  background: #4FE584;
+  color: #0A0A0A;
+}
+
+/* =============================================================
+   Before / After case-study cards
+   ============================================================= */
+.ba-card {
+  background: #111111;
+  border: 1px solid #1F1F1F;
+  border-radius: 18px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.ba-before { border-top: 3px solid #E5635A; }
+.ba-after  { border-top: 3px solid #4FE584; }
+
+.ba-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 22px;
+  flex-wrap: wrap;
+}
+.ba-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.ba-before .ba-label { color: #E5635A; }
+.ba-after  .ba-label { color: #4FE584; }
+
+.ba-meta {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: #6E6E6E;
+  text-transform: uppercase;
+}
+
+.ba-metric {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 500;
+  letter-spacing: -0.04em;
+  line-height: 0.88;
+  font-size: clamp(72px, 9vw, 112px);
+}
+.ba-before .ba-metric { color: #E5635A; }
+.ba-after  .ba-metric { color: #4FE584; }
+.ba-metric span { font-size: 0.45em; opacity: 0.7; margin-left: 4px; }
+
+.ba-status {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #A0A0A0;
+  line-height: 1.4;
+}
+
+.ba-stats {
+  margin-top: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+.ba-stats > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid #1F1F1F;
+  gap: 12px;
+}
+.ba-stats > div:last-child { border-bottom: none; }
+.ba-stats .ba-k {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  color: #6E6E6E;
+  text-transform: uppercase;
+}
+.ba-stats .ba-v {
+  font-weight: 600;
+  color: #F5F5F5;
+  font-size: 14px;
+  text-align: right;
+}
+.ba-low { color: #E5635A !important; }
+
+/* Connector arrow between Before and After */
+.ba-arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 10px;
+  padding: 16px 0;
+}
+.ba-arrow-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  color: #4FE584;
+  text-transform: uppercase;
+  max-width: 150px;
+  line-height: 1.4;
+}
+.ba-arrow-icon {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 56px;
+  color: #4FE584;
+  line-height: 1;
+}
+@media (max-width: 1023px) {
+  .ba-arrow-icon { transform: rotate(90deg); }
+}
+
+/* =============================================================
+   60-day expectation-setting callout
+   Used at the end of the Results section to pair Cohort 1 stats
+   with the "first 60 days" reality + 6-month outlook framing.
+   ============================================================= */
+.callout-60d {
+  background: #0F172A;
+  border: 1px solid rgba(34, 197, 94, 0.25);
+  border-radius: 18px;
+  padding: 28px 32px;
+  display: flex;
+  gap: 26px;
+  align-items: center;
+  box-shadow: 0 0 0 1px rgba(134, 232, 156, 0.04), 0 18px 60px -30px rgba(34, 197, 94, 0.25);
+}
+.callout-60d-badge {
+  flex: 0 0 auto;
+  width: 84px;
+  height: 84px;
+  border-radius: 999px;
+  border: 2px solid #22C55E;
+  background: rgba(34, 197, 94, 0.10);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #86E89C;
+}
+.callout-60d-badge .n {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: #86E89C;
+}
+.callout-60d-badge .unit {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-top: 4px;
+  color: #86E89C;
+}
+.callout-60d-body {
+  flex: 1;
+  min-width: 0;
+}
+.callout-60d-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #86E89C;
+  margin-bottom: 10px;
+}
+.callout-60d-text {
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.55;
+  color: #FFFFFF;
+}
+.callout-60d-text b {
+  color: #86E89C;
+  font-weight: 600;
+}
+@media (max-width: 640px) {
+  .callout-60d {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+    padding: 24px;
+  }
+}
+
+/* Pull-quote callout under each case */
+.quote-card {
+  background: linear-gradient(180deg, rgba(79, 229, 132, 0.04), rgba(79, 229, 132, 0.01));
+  border-left: 3px solid #4FE584;
+  padding: 22px 28px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(18px, 1.4vw, 22px);
+  color: #F5F5F5;
+  line-height: 1.45;
+  border-radius: 0 12px 12px 0;
+}
