@@ -109,6 +109,7 @@ body {
   gap: 10px;
   padding: 14px 22px;
   border-radius: 999px;
+  white-space: nowrap;
   background: #4FE584;
   color: #0A0A0A;
   font-weight: 600;
@@ -471,6 +472,24 @@ body {
   opacity: 0.6;
 }
 .announce-dismiss:hover { opacity: 1; }
+
+@media (max-width: 640px) {
+  .announce-bar {
+    height: auto;
+    max-height: 60px;
+    padding: 8px 40px 8px 16px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+  .announce-bar.dismissed {
+    max-height: 0;
+    padding: 0;
+  }
+}
 
 /* -------- Qualify section -------- */
 .qualify-list {
