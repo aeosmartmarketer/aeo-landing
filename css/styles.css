@@ -426,6 +426,75 @@ body {
   }
 }
 
+/* -------- Announcement bar -------- */
+.announce-bar {
+  background: #4FE584;
+  color: #0A0A0A;
+  height: 40px;
+  max-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  transition: max-height 0.25s ease, opacity 0.25s ease;
+}
+.announce-bar.dismissed {
+  max-height: 0;
+  opacity: 0;
+}
+.announce-bar a {
+  color: #0A0A0A;
+  font-weight: 700;
+  margin-left: 14px;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+.announce-bar a:hover { opacity: 0.75; }
+.announce-dismiss {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #0A0A0A;
+  line-height: 1;
+  padding: 4px 8px;
+  opacity: 0.6;
+}
+.announce-dismiss:hover { opacity: 1; }
+
+/* -------- Qualify section -------- */
+.qualify-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.qualify-list li {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #1F1F1F;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #D0D0D0;
+}
+.qualify-list li:last-child { border-bottom: none; }
+.qualify-list .qi {
+  flex: 0 0 auto;
+  font-size: 14px;
+  font-weight: 700;
+  margin-top: 3px;
+}
+
 /* Pull-quote callout under each case */
 .quote-card {
   background: linear-gradient(180deg, rgba(79, 229, 132, 0.04), rgba(79, 229, 132, 0.01));

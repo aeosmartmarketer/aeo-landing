@@ -24,8 +24,18 @@
 
 <body class="antialiased">
 
+<!-- ===================== ANNOUNCEMENT BAR + NAV (sticky wrapper) ===================== -->
+<div id="sticky-header" style="position:sticky;top:0;z-index:50;">
+
+<!-- Announcement bar -->
+<div class="announce-bar" id="announce-bar" role="banner" aria-label="Cohort 2 announcement">
+  <span>Cohort 2 starts July 1 &middot; 10 spots &middot; By application only</span>
+  <a href="#apply">Apply now &rarr;</a>
+  <button class="announce-dismiss" id="announce-dismiss" aria-label="Dismiss announcement">&times;</button>
+</div>
+
 <!-- ===================== NAV ===================== -->
-<nav class="sticky top-0 z-50 bg-ink/80 backdrop-blur border-b border-line">
+<nav class="bg-ink/80 backdrop-blur border-b border-line">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
     <a href="#top" class="flex items-center gap-3">
       <!-- Official AEO.co full wordmark -->
@@ -45,36 +55,28 @@
   </div>
 </nav>
 
+</div><!-- /sticky-header -->
+
 <!-- ===================== HERO ===================== -->
 <header id="top" class="relative overflow-hidden border-b border-line">
   <div class="hero-glow"></div>
   <div class="relative max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-24 lg:pt-28 lg:pb-32 grid lg:grid-cols-12 gap-12 items-center">
     <div class="lg:col-span-7">
-      <div class="flex items-center gap-3 mb-8">
-        <span class="pill pill-green"><span class="dot"></span> Cohort 2 · By Application Only</span>
-        <span class="pill">June 2026</span>
+      <div class="mb-6">
+        <span class="eyebrow">COHORT 2 · BY APPLICATION ONLY · STARTS JULY 1, 2026 · 10 SPOTS</span>
       </div>
       <h1 class="h-display text-5xl sm:text-6xl lg:text-7xl text-paper">
-        Turn your Authority<br/>into <span class="text-aeo h-italic">AI Visibility.</span>
+        Your brand is being filtered by machines. We make sure it survives.
       </h1>
       <p class="mt-8 text-lg lg:text-xl text-mute max-w-2xl leading-relaxed">
-        69% of searches now end without a click. The world's most valuable buying decisions are increasingly made <em class="text-paper not-italic">before</em> anyone visits your website — by ChatGPT, Google AI Mode, Gemini, and Perplexity.
-      </p>
-      <p class="mt-5 text-lg lg:text-xl text-paper max-w-2xl leading-relaxed">
-        AEO.co is the first dedicated Answer Engine Optimization agency engineered to make your brand the one machines <span class="text-aeo">cite, trust, and recommend</span>.
+        69% of searches now end without a click. ChatGPT, Google AI Mode, Gemini, and Perplexity are deciding which brands get recommended — before a human ever visits your site. AEO.co is the first dedicated Answer Engine Optimization agency built to make your brand the one machines <span class="text-aeo">cite, trust, and recommend</span>.
       </p>
       <div class="mt-10 flex flex-wrap items-center gap-4">
         <a href="#apply" class="btn-primary">Apply for Cohort 2 <span aria-hidden>&rarr;</span></a>
         <a href="#results" class="btn-ghost">See Cohort 1 results &darr;</a>
       </div>
-      <div class="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-mute2 font-mono tracking-wider uppercase">
-        <span>A Division of SmartMarketer™</span>
-        <span class="text-line2">|</span>
-        <span>10-Brand Cap</span>
-        <span class="text-line2">|</span>
-        <span>6-Month Engagement</span>
-        <span class="text-line2">|</span>
-        <span>$3,000 / mo</span>
+      <div class="mt-6 text-xs text-mute2 font-mono tracking-wider uppercase">
+        $3,000/mo &middot; 6-month commitment &middot; 10 brands only &middot; By application
       </div>
     </div>
 
@@ -127,6 +129,54 @@
   </div>
 </header>
 
+<!-- ===================== QUALIFY ===================== -->
+<section id="qualify" class="border-b border-line" style="background:#0E0E0E;">
+  <div class="max-w-7xl mx-auto px-6 lg:px-10 py-24 lg:py-28">
+    <div class="max-w-3xl mb-14">
+      <h2 class="h-display text-4xl lg:text-5xl text-paper">
+        Cohort 2 is built for ten specific brands. Read this before you apply.
+      </h2>
+      <p class="mt-6 text-lg text-mute leading-relaxed">
+        We're not for everyone. We pre-qualify hard because the engagement is intensive on both sides — and the spots are limited.
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-8">
+      <!-- For you -->
+      <div class="card p-8">
+        <div class="eyebrow mb-6">This is for you if:</div>
+        <ul class="qualify-list">
+          <li><span class="qi text-aeo">✓</span><span>You're a founder-led e-commerce brand, ideally on Shopify (we'll work around it if you're not)</span></li>
+          <li><span class="qi text-aeo">✓</span><span>You can put a founder or expert on camera for ~2 hours a week — the content engine doesn't run without a human signal at the top</span></li>
+          <li><span class="qi text-aeo">✓</span><span>You have real revenue and product-market fit (typically $1M+ ARR, but exceptions made for strong pre-launch challengers like BabyRx)</span></li>
+          <li><span class="qi text-aeo">✓</span><span>You're ready to commit $3,000/month for 6 months ($18,000 total) — AEO compounds, and shorter windows don't produce defensible citation share</span></li>
+          <li><span class="qi text-aeo">✓</span><span>You have a defensible position — something true and specific about your category we can make the machines recognize</span></li>
+        </ul>
+      </div>
+
+      <!-- Not for you -->
+      <div class="card p-8">
+        <div class="eyebrow mb-6" style="color:#E5635A;">This is NOT for you if:</div>
+        <ul class="qualify-list">
+          <li><span class="qi" style="color:#E5635A;">✕</span><span>You're hunting for traffic-only SEO</span></li>
+          <li><span class="qi" style="color:#E5635A;">✕</span><span>The founder won't show up on camera</span></li>
+          <li><span class="qi" style="color:#E5635A;">✕</span><span>You're an agency or a reseller</span></li>
+          <li><span class="qi" style="color:#E5635A;">✕</span><span>You want month-to-month with an out clause</span></li>
+          <li><span class="qi" style="color:#E5635A;">✕</span><span>Your brand is undifferentiated from category incumbents</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="mt-14 text-center">
+      <p class="text-xl text-paper mb-8 leading-relaxed">
+        If you read all of that and you're still in — apply below.<br/>
+        We respond within 5 business days.
+      </p>
+      <a href="#apply" class="btn-primary">Apply for Cohort 2 &rarr;</a>
+    </div>
+  </div>
+</section>
+
 <!-- ===================== THE SHIFT ===================== -->
 <section class="border-b border-line bg-ink">
   <div class="max-w-7xl mx-auto px-6 lg:px-10 py-20 lg:py-24 grid lg:grid-cols-12 gap-10 items-start">
@@ -158,11 +208,68 @@
     </div>
 
     <!-- ===================================================== -->
-    <!-- Case Study 01 — Winona                                 -->
+    <!-- Case Study 01 — Outdoor Vitals                         -->
     <!-- ===================================================== -->
     <div class="mt-20">
       <div class="flex flex-wrap items-baseline gap-3 mb-5">
         <span class="pill pill-green">Case 01</span>
+        <span class="pill">Outdoor Gear · Tents &amp; Backpacking · Founder-led DTC</span>
+        <span class="md:ml-auto eyebrow-mute">11 days · May 8 &rarr; May 19, 2026 · ChatGPT · AI Mode · Perplexity</span>
+      </div>
+      <h3 class="h-display text-3xl lg:text-4xl text-paper mb-4">Outdoor Vitals</h3>
+      <p class="text-mute leading-relaxed max-w-4xl">
+        Premium ultralight tents · direct-to-consumer · founder Tayson Whittaker. Outdoor Vitals entered Cohort 1 invisible — 0 AI Mode citations, 0 GPT citations, the answer set controlled by Zpacks, EnlightenedEquipment, Gossamergear, and DurstonGear. The entire content layer was rebuilt for machine consumption.
+      </p>
+
+      <!-- BEFORE / AFTER -->
+      <div class="mt-10 grid lg:grid-cols-12 gap-6 items-stretch">
+        <div class="lg:col-span-5 ba-card ba-before">
+          <div class="ba-header">
+            <div class="ba-label">Before</div>
+            <div class="ba-meta">Scanned May 8, 2026</div>
+          </div>
+          <div class="ba-metric">0<span>%</span></div>
+          <div class="ba-status">AI Visibility — brand filtered out</div>
+          <div class="ba-stats">
+            <div><span class="ba-k">Results citing OV</span><span class="ba-v">0 / 15</span></div>
+            <div><span class="ba-k">Mention rate</span><span class="ba-v">0%</span></div>
+            <div><span class="ba-k">GPT citations (4 wks)</span><span class="ba-v">0</span></div>
+            <div><span class="ba-k">Status</span><span class="ba-v ba-low">LOW</span></div>
+          </div>
+        </div>
+        <div class="lg:col-span-2 ba-arrow">
+          <div class="ba-arrow-label">+11 days · Machine-first rebuild</div>
+          <div class="ba-arrow-icon">&rarr;</div>
+        </div>
+        <div class="lg:col-span-5 ba-card ba-after">
+          <div class="ba-header">
+            <div class="ba-label">After</div>
+            <div class="ba-meta">May 19, 2026 · 20 queries · 3 engines</div>
+          </div>
+          <div class="ba-metric">34<span>%</span></div>
+          <div class="ba-status">AI Visibility — brand surfacing</div>
+          <div class="ba-stats">
+            <div><span class="ba-k">Results citing OV</span><span class="ba-v">22 / 60</span></div>
+            <div><span class="ba-k">Mention rate</span><span class="ba-v">37%</span></div>
+            <div><span class="ba-k">First GPT citation</span><span class="ba-v">Apr 30, 2026</span></div>
+            <div><span class="ba-k">Best query visibility</span><span class="ba-v">80% · lightweight backpacking</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 quote-card">
+        Eleven days from invisible to cited. <span class="text-aeo not-italic font-semibold">Same brand. Same products. Same founder.</span> What changed is the content layer the machines read.
+      </div>
+    </div>
+
+    <div class="rule-mute my-20"></div>
+
+    <!-- ===================================================== -->
+    <!-- Case Study 02 — Winona                                 -->
+    <!-- ===================================================== -->
+    <div>
+      <div class="flex flex-wrap items-baseline gap-3 mb-5">
+        <span class="pill pill-green">Case 02</span>
         <span class="pill">Menopause Telehealth · YMYL · DTC HRT</span>
         <span class="md:ml-auto eyebrow-mute">15-query broad scan &rarr; 6-query AI Mode focus · ChatGPT · AI Mode · Perplexity</span>
       </div>
@@ -231,11 +338,11 @@
     <div class="rule-mute my-20"></div>
 
     <!-- ===================================================== -->
-    <!-- Case Study 02 — BabyRx                                 -->
+    <!-- Case Study 03 — BabyRx                                 -->
     <!-- ===================================================== -->
     <div>
       <div class="flex flex-wrap items-baseline gap-3 mb-5">
-        <span class="pill pill-green">Case 02</span>
+        <span class="pill pill-green">Case 03</span>
         <span class="pill">Prenatal &amp; Fertility · CPG · YMYL · Pre-launch</span>
         <span class="md:ml-auto eyebrow-mute">3 weeks · Apr 6 &rarr; Apr 18, 2026 · ChatGPT · AI Mode · Perplexity</span>
       </div>
@@ -298,63 +405,6 @@
         <div class="mt-3 text-xs text-mute2 font-mono tracking-wider uppercase">
           Source · AEO.co Citation Tracker · GPT · Apr 6 &rarr; Apr 18 2026
         </div>
-      </div>
-    </div>
-
-    <div class="rule-mute my-20"></div>
-
-    <!-- ===================================================== -->
-    <!-- Case Study 03 — Outdoor Vitals                         -->
-    <!-- ===================================================== -->
-    <div>
-      <div class="flex flex-wrap items-baseline gap-3 mb-5">
-        <span class="pill pill-green">Case 03</span>
-        <span class="pill">Outdoor Gear · Tents &amp; Backpacking · Founder-led DTC</span>
-        <span class="md:ml-auto eyebrow-mute">11 days · May 8 &rarr; May 19, 2026 · ChatGPT · AI Mode · Perplexity</span>
-      </div>
-      <h3 class="h-display text-3xl lg:text-4xl text-paper mb-4">Outdoor Vitals</h3>
-      <p class="text-mute leading-relaxed max-w-4xl">
-        Premium ultralight tents · direct-to-consumer · founder Tayson Whittaker. Outdoor Vitals entered Cohort 1 invisible — 0 AI Mode citations, 0 GPT citations, the answer set controlled by Zpacks, EnlightenedEquipment, Gossamergear, and DurstonGear. The entire content layer was rebuilt for machine consumption.
-      </p>
-
-      <!-- BEFORE / AFTER -->
-      <div class="mt-10 grid lg:grid-cols-12 gap-6 items-stretch">
-        <div class="lg:col-span-5 ba-card ba-before">
-          <div class="ba-header">
-            <div class="ba-label">Before</div>
-            <div class="ba-meta">Scanned May 8, 2026</div>
-          </div>
-          <div class="ba-metric">0<span>%</span></div>
-          <div class="ba-status">AI Visibility — brand filtered out</div>
-          <div class="ba-stats">
-            <div><span class="ba-k">Results citing OV</span><span class="ba-v">0 / 15</span></div>
-            <div><span class="ba-k">Mention rate</span><span class="ba-v">0%</span></div>
-            <div><span class="ba-k">GPT citations (4 wks)</span><span class="ba-v">0</span></div>
-            <div><span class="ba-k">Status</span><span class="ba-v ba-low">LOW</span></div>
-          </div>
-        </div>
-        <div class="lg:col-span-2 ba-arrow">
-          <div class="ba-arrow-label">+11 days · Machine-first rebuild</div>
-          <div class="ba-arrow-icon">&rarr;</div>
-        </div>
-        <div class="lg:col-span-5 ba-card ba-after">
-          <div class="ba-header">
-            <div class="ba-label">After</div>
-            <div class="ba-meta">May 19, 2026 · 20 queries · 3 engines</div>
-          </div>
-          <div class="ba-metric">34<span>%</span></div>
-          <div class="ba-status">AI Visibility — brand surfacing</div>
-          <div class="ba-stats">
-            <div><span class="ba-k">Results citing OV</span><span class="ba-v">22 / 60</span></div>
-            <div><span class="ba-k">Mention rate</span><span class="ba-v">37%</span></div>
-            <div><span class="ba-k">First GPT citation</span><span class="ba-v">Apr 30, 2026</span></div>
-            <div><span class="ba-k">Best query visibility</span><span class="ba-v">80% · lightweight backpacking</span></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="mt-8 quote-card">
-        Eleven days from invisible to cited. <span class="text-aeo not-italic font-semibold">Same brand. Same products. Same founder.</span> What changed is the content layer the machines read.
       </div>
     </div>
 
@@ -607,12 +657,16 @@
       <div class="mt-10 card p-6">
         <div class="flex items-baseline justify-between">
           <span class="text-mute font-mono text-xs tracking-widest uppercase">Total commitment</span>
-          <span class="text-aeo font-mono text-xs tracking-widest uppercase">Onboarding · June 2026</span>
+          <span class="text-aeo font-mono text-xs tracking-widest uppercase">Cohort 2 starts · July 1, 2026</span>
         </div>
+        <div class="mt-4 mb-1 text-sm text-mute2 font-mono tracking-wider uppercase">10 brands. Six months. By application only.</div>
         <div class="mt-3 flex items-baseline gap-3">
           <span class="metric text-5xl text-paper">$18,000</span>
           <span class="text-mute">$3,000 / mo × 6 months</span>
         </div>
+        <p class="mt-4 text-xs text-mute leading-relaxed">
+          Applications close when we fill the ten seats — or June 24, 2026, whichever comes first. Discovery calls scheduled within 5 business days of qualified applications.
+        </p>
         <div class="rule-mute my-5"></div>
         <div class="grid grid-cols-2 gap-4">
           <div>
@@ -635,66 +689,31 @@
       </div>
     </div>
 
-    <!-- Application form -->
+    <!-- Typeform embed -->
     <div class="lg:col-span-7">
-      <!--
-        FORM DELIVERY
-        Submissions are emailed to aeo@smartmarketer.com via FormSubmit.co (no backend, free).
-        First-time activation: after the first submission, FormSubmit sends a one-click
-        confirmation link to aeo@smartmarketer.com. Click once → all future submissions arrive automatically.
-        To change the destination address, edit the `action` attribute below.
-      -->
-      <form class="card p-8 lg:p-10"
-            action="https://formsubmit.co/aeo@smartmarketer.com"
-            method="POST">
-        <!-- FormSubmit configuration (hidden) -->
-        <input type="hidden" name="_subject" value="New Cohort 2 Application — AEO.co" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_autoresponse" value="Thanks for applying to AEO.co Cohort 2. The founding team reviews every application personally. We'll be back to you within 5 business days. — AEO.co · A Division of SmartMarketer™" />
-        <input type="text" name="_honey" style="display:none" />
+      <div class="card p-8 lg:p-10">
+        <h2 class="h-display text-3xl lg:text-4xl text-paper">Tell us why your brand should be one of the ten.</h2>
+        <p class="mt-4 text-lg text-mute leading-relaxed">
+          3-minute application. If it's a fit, you'll book a call with Kasim/Pep directly on the next screen.
+        </p>
 
-        <div class="eyebrow-mute mb-2">Application · Cohort 2</div>
-        <h3 class="h-display text-2xl lg:text-3xl text-paper">Tell us why your brand should be one of the ten.</h3>
-
-        <div class="mt-8 grid md:grid-cols-2 gap-4">
-          <div>
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">Full Name</label>
-            <input class="input" type="text" name="name" placeholder="Jane Doe" required />
-          </div>
-          <div>
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">Work Email</label>
-            <input class="input" type="email" name="email" placeholder="jane@brand.com" required />
-          </div>
-          <div>
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">Company / Brand</label>
-            <input class="input" type="text" name="company" placeholder="Your brand" required />
-          </div>
-          <div>
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">Website</label>
-            <input class="input" type="url" name="website" placeholder="https://" required />
-          </div>
-          <div class="md:col-span-2">
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">Annual Revenue Band</label>
-            <select class="input" name="revenue" required>
-              <option value="">Select a range</option>
-              <option>Under $1M</option>
-              <option>$1M – $5M</option>
-              <option>$5M – $25M</option>
-              <option>$25M+</option>
-            </select>
-          </div>
-          <div class="md:col-span-2">
-            <label class="text-xs text-mute font-mono uppercase tracking-wider block mb-2">One sentence — what makes your brand the answer?</label>
-            <textarea class="input" name="answer" rows="3" placeholder="The thing that should be true the moment a machine reads your category." required></textarea>
-          </div>
+        <!-- =====================================================
+             TYPEFORM EMBED
+             Replace the div below with the embed code from
+             Typeform (Share → Embed → Standard).
+             The div id="typeform-embed" should be preserved so
+             any future scripts can target it.
+             ===================================================== -->
+        <div id="typeform-embed" class="mt-8 flex items-center justify-center rounded-2xl" style="min-height:480px; background:#111111; border:1px dashed #2A2A2A;">
+          <p class="text-mute2 font-mono text-xs tracking-wider uppercase text-center px-8">
+            [ Typeform embed — paste embed code here ]
+          </p>
         </div>
 
-        <div class="mt-8 flex flex-wrap items-center gap-4 justify-between">
-          <p class="text-xs text-mute2">We respond within <span class="text-paper">5 business days</span>. Confidential. No public client list.</p>
-          <button type="submit" class="btn-primary">Submit Application <span aria-hidden>&rarr;</span></button>
-        </div>
-      </form>
+        <p class="mt-6 text-xs text-mute2 text-center font-mono tracking-wider uppercase">
+          Confidential &middot; No public client list &middot; We respond within 5 business days
+        </p>
+      </div>
     </div>
   </div>
 </section>
@@ -724,5 +743,19 @@
   </div>
 </footer>
 
+<script>
+  (function () {
+    var bar = document.getElementById('announce-bar');
+    var btn = document.getElementById('announce-dismiss');
+    if (sessionStorage.getItem('aeo-bar-dismissed')) {
+      bar.style.display = 'none';
+    }
+    btn.addEventListener('click', function () {
+      bar.classList.add('dismissed');
+      setTimeout(function () { bar.style.display = 'none'; }, 250);
+      sessionStorage.setItem('aeo-bar-dismissed', '1');
+    });
+  })();
+</script>
 </body>
 </html>
